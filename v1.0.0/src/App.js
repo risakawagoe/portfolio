@@ -1,20 +1,58 @@
+import { useEffect, useState } from 'react'
+import { Link } from 'react-scroll'
 import './App.css'
+
+// assets
 import FooterLogo from "./img/footer-logo.png"
 
 // sections
-import FeaturedWork from './FeaturedWork'
 import Hero from './Hero'
-import Projects from './Projects'
 import Skills from './Skills'
-import { Link } from 'react-scroll'
+import FeaturedWork from './FeaturedWork'
+import Projects from './Projects'
+import About from './About'
+import Contact from './Contact'
+import VideoModal from './components/VideoModal'
 
 export default function App() {
+    const [project, setProject] = useState(null)
+    const [view, setView] = useState('main')
+
+    useEffect(() => {
+        if(project) {
+            setView("video")
+        }
+    }, [project])
+
+    useEffect(() => {
+        console.log(view)
+        if(view === "main") {
+            setProject(null)
+        }else if(view === "about") {
+
+        }else if(view === "contact") {
+
+        }
+    }, [view])
+
+    function openVideoModal(project) {
+        setProject(project)
+    }
+    function closeVideoModal() {
+        const modal = document.getElementById("videoModal")
+        modal.classList.toggle("show")
+
+        setTimeout(() => {
+            setView("main")
+        }, 500)
+    }
+
     return (
         <div className='App'>
             <Hero />
             <Skills />
-            <FeaturedWork />
-            <Projects />
+            <FeaturedWork openVideoModal={openVideoModal} />
+            <Projects openVideoModal={openVideoModal} />
             <footer>
                 <img src={FooterLogo} alt='footer logo' />
                 <nav>
@@ -32,6 +70,9 @@ export default function App() {
                     <p>+1 (236) 982-8078</p>
                 </div>
             </footer>
+            {view === "about" && <About />}
+            {view === "contact" && <Contact />}
+            {view === "video" && project && <VideoModal project={project} notifyModalClosure={closeVideoModal} />}
         </div>
     )
 }

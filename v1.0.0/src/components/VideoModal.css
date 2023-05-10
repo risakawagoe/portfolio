@@ -1,0 +1,96 @@
+/* video modal */
+#videoModal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    opacity: 0;
+    animation: 500ms fadeOut forwards;
+    z-index: 100;
+}
+#videoModal.show {
+    animation: 500ms fadeIn 500ms forwards;
+}
+  
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+  
+#videoModal .modal {
+    border-radius: 12px;
+    width: 540px;
+    max-width: calc(100vw - 44px);/* padding 32px + scrollbar 12px*/
+    max-height: calc(100vh - 32px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(calc(-50% - 6px), -50%, 0);
+}
+
+
+#videoModal .modal header {
+    padding: 6px 12px 4px 12px;
+    display: flex;
+    background-color: #F0F0F0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+#videoModal .modal header p {
+    color: #000;
+    height: max-content;
+}
+  
+#videoModal #closeBtn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    transition: .3s;
+}
+#videoModal #closeBtn path {
+    color: #000;
+}
+#videoModal #closeBtn:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .1);
+    transition: .3s;
+}
+
+#videoModal .video-container {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 ratio */
+    position: relative;
+}
+  
+#videoModal .video-container iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+  
