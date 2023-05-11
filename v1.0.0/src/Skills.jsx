@@ -10,13 +10,13 @@ export default function Skills() {
                 <li>TypeScript</li>
                 <li>PHP</li>
                 <li>HTML, CSS</li>
+                <li>C, C++</li>
                 <li>Java, Kotlin, Python</li>
             </ul>
 
             <h3>Frameworks</h3>
             <ul>
                 <li>jQuery</li>
-                {/* <li>Django</li> */}
             </ul>
 
             <h3>Databases</h3>

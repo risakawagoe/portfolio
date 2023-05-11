@@ -18,8 +18,14 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
   border-radius: 6px;
-  background-color: #125566a6;
+  background-color: #00000049;
   border: 3px solid #f0f0f0;
+  /* background-color: #125566a6;
+  border: 3px solid #f0f0f0; */
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #0000008a;
+
 }
 
 h1, h2 {
@@ -417,6 +423,61 @@ footer .contact-info p {
   padding: 4px 8px;
   font-size: 12px;
 }
+
+/* about me section */
+div#about {
+
+}
+div#about h3 {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 700;
+}
+div#about p,
+div#about strong,
+div#about a,
+div#about span {
+  color: #000;
+}
+div#about a:hover {
+  color: #1976d2;
+}
+
+div#about section:not(:last-of-type) {
+  margin-bottom: 24px;
+}
+
+
+/* contact section */
+div#contact {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+div#contact .form-input {
+  margin-top: 16px;
+}
+div#contact .form-input label.MuiFormLabel-colorPrimary .MuiFormLabel-asterisk {
+  color: rgba(0, 0, 0, 0.6);
+}
+div#contact .form-input label.MuiFormLabel-colorPrimary.Mui-focused .MuiFormLabel-asterisk {
+  color: #1976d2;
+}
+div#contact .form-input label.MuiFormLabel-colorPrimary.Mui-error .MuiFormLabel-asterisk {
+  color: #D32f2f;
+}
+div#contact .form-input label.MuiFormLabel-colorPrimary.Mui-error.Mui-focused .MuiFormLabel-asterisk {
+  color: #D32f2f;
+}
+div#contact .MuiButton-outlinedPrimary {
+  color: #125566 !important;
+  border-color: #12556681 !important;
+}
+div#contact .align-right {
+  display: flex;
+  justify-content: right;
+}
+
 
 
 /* mobile */

@@ -10,9 +10,8 @@ import Hero from './Hero'
 import Skills from './Skills'
 import FeaturedWork from './FeaturedWork'
 import Projects from './Projects'
-import About from './About'
-import Contact from './Contact'
 import VideoModal from './components/VideoModal'
+import Modal from './components/Modal'
 
 export default function App() {
     const [project, setProject] = useState(null)
@@ -28,10 +27,6 @@ export default function App() {
         console.log(view)
         if(view === "main") {
             setProject(null)
-        }else if(view === "about") {
-
-        }else if(view === "contact") {
-
         }
     }, [view])
 
@@ -46,10 +41,27 @@ export default function App() {
             setView("main")
         }, 500)
     }
+    
+    function openAboutModal() {
+        setView("about")
+    }
+    function openContactModal() {
+        setView("contact")
+    }
+    function closeSectionModal() {
+        const modal = document.getElementById("sectionModal")
+        modal.classList.toggle("show")
+    
+        setTimeout(() => {
+            setView("main")
+        }, 500)
+
+    }
+
 
     return (
         <div className='App'>
-            <Hero />
+            <Hero openAboutModal={openAboutModal} openContactModal={openContactModal} />
             <Skills />
             <FeaturedWork openVideoModal={openVideoModal} />
             <Projects openVideoModal={openVideoModal} />
@@ -57,11 +69,11 @@ export default function App() {
                 <img src={FooterLogo} alt='footer logo' />
                 <nav>
                     <ul>
-                        <p><Link onClick={() => alert("About Me")}>About Me</Link></p>
+                        <p><Link to='about' onClick={openAboutModal}>About Me</Link></p>
                         <p><Link to="skills" spy="true" smooth="true" offset={-32} duration={500}>Skills</Link></p>
                         <p><Link to="featuredwork" spy="true" smooth="true" offset={-32} duration={500}>Featured Work</Link></p>
                         <p><Link to="projects" spy="true" smooth="true" offset={-32} duration={500}>Projects</Link></p>
-                        <p><Link onClick={() => alert("Contact")}>Contact</Link></p>
+                        <p><Link to='contact' onClick={openContactModal}>Contact</Link></p>
                     </ul>
                 </nav>
 
@@ -70,8 +82,7 @@ export default function App() {
                     <p>+1 (236) 982-8078</p>
                 </div>
             </footer>
-            {view === "about" && <About />}
-            {view === "contact" && <Contact />}
+            {(view === "about" || view === "contact") && <Modal view={view} notifyModalClosure={closeSectionModal} />}
             {view === "video" && project && <VideoModal project={project} notifyModalClosure={closeVideoModal} />}
         </div>
     )

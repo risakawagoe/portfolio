@@ -9,8 +9,6 @@ import { getProjects, getProjectById } from "./data.service";
 export default function Projects({openVideoModal}) {
 
     const observer = new IntersectionObserver(fadeInProject, {})
-
-    // modal
     const [projects, setProjects] = useState([])
     
     useEffect(() => {

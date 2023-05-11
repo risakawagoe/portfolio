@@ -5,75 +5,87 @@
 const projects = [
     {
         id: "1_YHGOD",
-        title: "SFU Synapse 1",
-        duration: "May 2023 - Present",
-        preview: require("./img/preview/test.png"),
-        description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+        title: "SFU Synapse - React app",
+        duration: "January - April 2023",
+        preview: require("./img/preview/sfu-synapse.png"),
+        description: "SFU Synapse is a full-stack web application that helps SFU students to discover other students with common interests and help users build and maintain strong and meaningful connections.",
         techStack: [
-            "Angular JS",
-            "JavaScript",
-            "HTML",
-            "CSS",
-            "Node JS"
+            "React JS",
+            "MySQL",
+            "Node JS",
+            "Express",
+            "SFU Course Outline REST API",
+            "Bootstrap",
+            "Docker",
+            "GCP Compute Engine",
+            "GCP Cloud MySQL",
+            "GitLab"
         ],
-        url: "https://google.com",
-        srcCode: "https://github/risakawagoe/project",
-        videoTitle: "Title of first project demo video",
-        videoID: "UnWUmg6fEIw",
+        url: "https://csil-git1.cs.surrey.sfu.ca/cmpt372-group-project/sfu-synapse",
+        srcCode: "https://csil-git1.cs.surrey.sfu.ca/cmpt372-group-project/sfu-synapse",
+        videoTitle: "Demo video: *in progress",
+        videoID: "pBy1zgt0XPc",
         featured: true,
         visible: true
     },
     {
         id: "2_KLAYNW",
-        title: "SFU Synapse 2",
-        duration: "January - April 2023",
-        preview: require("./img/preview/test.png"),
-        description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+        title: "Portfolio website with React",
+        duration: "May 2023 - Present",
+        preview: require("./img/preview/portfolio-website.png"),
+        description: "Currently in the process of assebling resources (demo video, source code, and some design related implementation).",
         techStack: [
+            "React JS",
+            "JavaScript",
             "HTML",
             "CSS",
-            "Angular JS"
+            "Material UI",
+            "Bootstrap",
+            "EmailJS",
+            "GitHub"
         ],
-        url: "https://google.com",
-        srcCode: "https://github/risakawagoe/project",
-        videoTitle: "Title of second project demo video",
-        videoID: "lH_n29wkT_4",
+        url: "https://risakawagoe.github.io",
+        srcCode: "https://github.com/risakawagoe/portfolio/tree/main/v1.0.0",
+        videoTitle: "Demo video: *in progress",
+        videoID: "pBy1zgt0XPc",
         featured: false,
         visible: true
     },
     {
-        id: "3_DIGAAS",
-        title: "SFU Synapse 3",
-        duration: "December 2022 - January 2023",
-        preview: require("./img/preview/test.png"),
-        description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+        id: "3_PAUSBN",
+        title: "Business website with wordpress",
+        duration: "May - July 2021",
+        preview: require("./img/preview/web-business-website.png"),
+        description: "Created a business style WordPress theme which helps showcase previous works and make public announcements.",
         techStack: [
-            "Docker",
-            "GCP Compute Engine"
-        ],
-        url: "https://google.com",
-        srcCode: "https://github/risakawagoe/project",
-        videoTitle: "Title of thrid project demo video",
-        videoID: "pG6iaOMV46I",
-        featured: false,
-        visible: true
-    },
-    {
-        id: "4_PAUSBN",
-        title: "SFU Synapse 4",
-        duration: "May - August 2021",
-        preview: require("./img/preview/test.png"),
-        description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
-        techStack: [
-            "Docker",
-            "GCP Compute Engine",
+            "JavaScript",
+            "HTML",
+            "CSS",
             "PHP",
-            "WordPress"
+            "CMS (WordPress)"
         ],
-        url: "https://google.com",
-        srcCode: "https://github/risakawagoe/project",
-        videoTitle: "Title of thrid project demo video",
-        videoID: "pG6iaOMV46I",
+        url: "https://kawagoeweb.com",
+        srcCode: "https://kawagoeweb.com",
+        videoTitle: "Demo video: *in progress",
+        videoID: "pBy1zgt0XPc",
+        featured: false,
+        visible: true
+    },
+    {
+        id: "4_DIGAAS",
+        title: "Business website for freelance videographer",
+        duration: "May 2020 - June 2021",
+        preview: require("./img/preview/freelance-videographer-website.png"),
+        description: "A business website for a freelance videographer/video-editor to showcase services and previous works, and allow potential clients to reach out.",
+        techStack: [
+            "JavaScript",
+            "HTML",
+            "CSS"
+        ],
+        url: "https://videographiti.biz/",
+        srcCode: "https://videographiti.biz/",
+        videoTitle: "Demo video: *in progress",
+        videoID: "pBy1zgt0XPc",
         featured: false,
         visible: true
     },
@@ -90,10 +102,10 @@ const projects = [
         ],
         url: "https://google.com",
         srcCode: "https://github/risakawagoe/project",
-        videoTitle: "Title of fifth project demo video",
-        videoID: "pG6iaOMV46I",
+        videoTitle: "Demo video: *in progress",
+        videoID: "pBy1zgt0XPc",
         featured: false,
-        visible: true
+        visible: false
     }
 ]
 
@@ -109,7 +121,7 @@ function getProjects() {
 
     // return []
     const list = getAllProjects()
-    return list.filter(project => {return !project.featured})
+    return list.filter(project => {return !project.featured && project.visible})
 }
 
 function getProjectById(id) {
