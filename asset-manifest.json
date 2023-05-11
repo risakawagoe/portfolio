@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.06d36d9b.css",
+    "main.js": "/static/js/main.b673228e.js",
+    "static/media/sfu-synapse.png": "/static/media/sfu-synapse.20926d5225cf3d48e8f0.png",
+    "static/media/portfolio-website.png": "/static/media/portfolio-website.eaa5d96232c93a4b67d1.png",
+    "static/media/header-bg.jpg": "/static/media/header-bg.29f6c93a543ce83e6ff0.jpg",
+    "static/media/web-business-website.png": "/static/media/web-business-website.fdb0d874ff359118c6d2.png",
+    "static/media/freelance-videographer-website.png": "/static/media/freelance-videographer-website.f14bca68b605281c2378.png",
+    "static/media/test.png": "/static/media/test.8e5c0dc437c6afd98494.png",
+    "static/media/resume.pdf": "/static/media/resume.3a77dcfe00cf51e50182.pdf",
+    "static/media/about-banner-bg.png": "/static/media/about-banner-bg.fe365c2a1734234d0195.png",
+    "static/media/contact-banner-bg.png": "/static/media/contact-banner-bg.eb1a37361d1b71ce56bb.png",
+    "static/media/footer-logo.png": "/static/media/footer-logo.36411cf2f2288b095ded.png",
+    "index.html": "/index.html",
+    "main.06d36d9b.css.map": "/static/css/main.06d36d9b.css.map",
+    "main.b673228e.js.map": "/static/js/main.b673228e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.06d36d9b.css",
+    "static/js/main.b673228e.js"
+  ]
+}
