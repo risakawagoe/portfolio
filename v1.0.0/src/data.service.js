@@ -87,7 +87,7 @@ const projects = [
         ],
         url: null,
         srcCode: "https://github.com/risakawagoe/2D-java-maze-game",
-        videoID: "pBy1zgt0XPc",
+        videoID: "aygcDsqt94s",
         featured: false,
         visible: true
     },
