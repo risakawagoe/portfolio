@@ -4,9 +4,32 @@
 // dummy
 const projects = [
     {
-        id: "1_YHGOD",
+        id: "KLAYNW",
+        title: "Portfolio Website",
+        duration: "May 2023 - Present",
+        preview: require("./img/preview/portfolio-website.png"),
+        description: "Currently in the process of assebling resources (demo video, source code, and some design related implementation).",
+        techStack: [
+            "React JS",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "Material UI",
+            "Bootstrap",
+            "EmailJS",
+            "GitHub",
+            "Figma"
+        ],
+        url: "https://risakawagoe.com",
+        srcCode: "https://github.com/risakawagoe/portfolio/tree/main/v1.0.0",
+        videoID: "pBy1zgt0XPc",
+        featured: false,
+        visible: true
+    },
+    {
+        id: "YHGOD",
         title: "SFU Synapse - React app",
-        duration: "January - April 2023",
+        duration: "Jan - Apr 2023",
         preview: require("./img/preview/sfu-synapse.png"),
         description: "SFU Synapse is a full-stack web application that helps SFU students to discover other students with common interests and help users build and maintain strong and meaningful connections.",
         techStack: [
@@ -21,91 +44,88 @@ const projects = [
             "GCP Cloud MySQL",
             "GitLab"
         ],
-        url: "https://csil-git1.cs.surrey.sfu.ca/cmpt372-group-project/sfu-synapse",
-        srcCode: "https://csil-git1.cs.surrey.sfu.ca/cmpt372-group-project/sfu-synapse",
-        videoTitle: "Demo video: *in progress",
+        url: null,
+        srcCode: "https://github.com/risakawagoe/sfu-synapse",
         videoID: "pBy1zgt0XPc",
         featured: true,
         visible: true
     },
     {
-        id: "2_KLAYNW",
-        title: "Portfolio website with React",
-        duration: "May 2023 - Present",
-        preview: require("./img/preview/portfolio-website.png"),
-        description: "Currently in the process of assebling resources (demo video, source code, and some design related implementation).",
+        id: "PAUSBN",
+        title: "Pig Tracker",
+        duration: "Sep - Dec 2022",
+        preview: require("./img/preview/pig-tracker.png"),
+        description: "Designed and developed an app to help a farmer track lost pigs using Angular and TypeScript; acknowledged by course TA for outstanding UI. Implemented communication with backend Data Manager API to allow the community to submit reports and to display them in a list or a map using the Leaflet API",
         techStack: [
-            "React JS",
-            "JavaScript",
+            "Angular",
+            "TypeScript",
+            "Leaflet",
+            "Storage Server API",
             "HTML",
             "CSS",
-            "Material UI",
-            "Bootstrap",
-            "EmailJS",
-            "GitHub"
+            "JSON",
+            "Bootstrap"
         ],
-        url: "https://risakawagoe.github.io",
-        srcCode: "https://github.com/risakawagoe/portfolio/tree/main/v1.0.0",
-        videoTitle: "Demo video: *in progress",
+        url: "https://pig-tracker.risakawagoe.com",
+        srcCode: "https://github.com/risakawagoe/pig-tracker",
         videoID: "pBy1zgt0XPc",
         featured: false,
         visible: true
     },
     {
-        id: "3_PAUSBN",
-        title: "Business website with wordpress",
-        duration: "May - July 2021",
-        preview: require("./img/preview/web-business-website.png"),
-        description: "Created a business style WordPress theme which helps showcase previous works and make public announcements.",
+        id: "CHEIUDG",
+        title: "Survive in the End - 2D Java Maze Game",
+        duration: "Jan - Apr 2022",
+        preview: require("./img/preview/2D-java-maze-game.png"),
+        description: "An arcade style pseudo 3D game developed in Java and runs on desktops.",
         techStack: [
-            "JavaScript",
+            "Java",
+            "intelliJ IDE with JDK",
+            "GitLab",
+            "Maven",
+            "Junit"
+        ],
+        url: null,
+        srcCode: "https://github.com/risakawagoe/2D-java-maze-game",
+        videoID: "pBy1zgt0XPc",
+        featured: false,
+        visible: true
+    },
+    {
+        id: "DIGAAS",
+        title: "Business Enterprise WordPress Theme",
+        duration: "Jun - Aug 2021",
+        preview: require("./img/preview/web-business-website.png"),
+        description: "Developed a professionally designed WordPress Theme for small business owners.",
+        techStack: [
+            "PHP",
+            "jQuery",
             "HTML",
             "CSS",
-            "PHP",
             "CMS (WordPress)"
         ],
         url: "https://kawagoeweb.com",
-        srcCode: "https://kawagoeweb.com",
-        videoTitle: "Demo video: *in progress",
+        srcCode: "https://github.com/risakawagoe/wordpress-theme-business",
         videoID: "pBy1zgt0XPc",
         featured: false,
         visible: true
     },
     {
-        id: "4_DIGAAS",
-        title: "Business website for freelance videographer",
-        duration: "May 2020 - June 2021",
-        preview: require("./img/preview/freelance-videographer-website.png"),
-        description: "A business website for a freelance videographer/video-editor to showcase services and previous works, and allow potential clients to reach out.",
+        id: "DIGAAS",
+        title: "Digital Daily Planner Printer",
+        duration: "Jul - Aug 2020",
+        preview: require("./img/preview/daily-planner-printer.png"),
+        description: "Dynamic, customizable, and printable daily planner developed with JavaScript, HTML, and CSS. This was created in response to the voices of users of Sony's discontinued service - Digital Paper Template Daily Scheduler.",
         techStack: [
             "JavaScript",
             "HTML",
             "CSS"
         ],
-        url: "https://videographiti.biz/",
-        srcCode: "https://videographiti.biz/",
-        videoTitle: "Demo video: *in progress",
+        url: "https://daily-planner.risakawagoe.com",
+        srcCode: "https://github.com/risakawagoe/daily-planner-printer",
         videoID: "pBy1zgt0XPc",
         featured: false,
         visible: true
-    },
-    {
-        id: "5_CHEIUDG",
-        title: "SFU Synapse 5",
-        duration: "May 2023 - Present",
-        preview: require("./img/preview/test.png"),
-        description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
-        techStack: [
-            "Docker",
-            "GCP Compute Engine",
-            "Git"
-        ],
-        url: "https://google.com",
-        srcCode: "https://github/risakawagoe/project",
-        videoTitle: "Demo video: *in progress",
-        videoID: "pBy1zgt0XPc",
-        featured: false,
-        visible: false
     }
 ]
 

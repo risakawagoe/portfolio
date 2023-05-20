@@ -18,6 +18,10 @@ export default function App() {
     const [view, setView] = useState('main')
 
     useEffect(() => {
+        document.title = 'risakawagoe';
+      }, []);
+
+    useEffect(() => {
         if(project) {
             setView("video")
         }

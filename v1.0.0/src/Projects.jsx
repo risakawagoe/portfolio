@@ -37,7 +37,6 @@ export default function Projects({openVideoModal}) {
         })
     }
 
-
     return (
         <div id="projects">
             <section>
@@ -65,8 +64,8 @@ export default function Projects({openVideoModal}) {
                                     </p>
                                 </div>
                                 <div className="project-links">
-                                    <a href={project.url} target="_blank" rel="noreferrer"><img src={viewIcon} alt="" /></a>
-                                    <a href={project.srcCode} target="_blank" rel="noreferrer"><img src={githubIcon} alt="" /></a>
+                                    {project.url && <a href={project.url} target="_blank" rel="noreferrer"><img src={viewIcon} alt="" /></a>}
+                                    {project.srcCode && <a href={project.srcCode} target="_blank" rel="noreferrer"><img src={githubIcon} alt="" /></a>}
                                 </div>
                             </section>
                         </div>
