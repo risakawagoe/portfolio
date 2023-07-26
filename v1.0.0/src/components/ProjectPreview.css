@@ -1,0 +1,153 @@
+figure.preview {
+    position: relative;
+    margin-bottom: 16px;
+}
+figure.preview img {
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 2px 0 8px 0 rgba(0, 0, 0, .6);
+    vertical-align: text-bottom;
+}
+figure.preview div.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0;
+    transition: .3s ease-in-out;
+    z-index: 1;
+}
+figure.preview div.overlay p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: max-content;
+    max-width: 100%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: #125566;
+    font-size: 2em;
+    background-color: transparent;
+}
+figure.preview div.overlay:hover {
+    cursor: pointer;
+    opacity: .7;
+    transition: .3s ease-in-out;
+}
+
+
+
+/* tooltip */
+.faded figure.preview div.tooltip {
+    z-index: -1;
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    padding: 10px 6px;
+    top: 0;
+    left: calc(100% - 32px);
+    background-color: #125566;
+    color: #fff;
+    word-spacing: 2px;
+    max-width: 100%;
+    max-height: 100%;
+  
+    animation: slideIn .3s ease-in-out 1.5s forwards;
+}
+.faded figure.preview div.tooltip p {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin: 0;
+    font-size: .75em;
+    
+    animation: fadeIn 3s;
+}
+
+#featuredwork .faded figure.preview div.tooltip {
+    z-index: -1;
+    top: calc(100% - 32px);
+    left: 0;
+    animation: slideDown .5s ease-in-out 1s forwards;
+}
+#featuredwork .faded figure.preview div.tooltip p {
+    writing-mode: unset;
+    text-orientation: upright;
+}
+
+@keyframes slideIn {
+    0% {
+        left: calc(100% - 32px);
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        top: calc(100% - 32px);
+    }
+    100% {
+        top: 100%;
+    }
+}
+@keyframes slideUp {
+    0% {
+        bottom: calc(100% - 32px);
+    }
+    100% {
+        bottom: 100%;
+    }
+}
+  
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+/* mobile */
+@media (max-width: 720px) {
+    #featuredwork .faded figure.preview img {
+        max-width: 100%;
+    }
+
+    #featuredwork .faded figure.preview div.tooltip {
+        top: unset;
+        bottom: calc(100% - 32px);
+        animation: slideUp .5s ease-in-out 1s forwards;
+    }
+}
+@media (max-width: 520px) {
+    figure.preview div.overlay p {
+        font-size: 5vw;
+    }
+
+    /* tooltip */
+    .faded figure.preview div.tooltip {
+        z-index: 1;
+        padding: 6px 10px;
+        top: unset;
+        left: unset;
+        bottom: 0;
+        right: 0;
+        opacity: 1;
+        animation: unset;
+    }
+    .faded figure.preview div.tooltip p {
+        margin: 0;
+        font-size: .75em;
+        animation: unset;
+
+        writing-mode: unset;
+        text-orientation: upright;
+    }
+}
