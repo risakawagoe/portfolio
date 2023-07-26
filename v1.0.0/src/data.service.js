@@ -1,14 +1,31 @@
-// import testImg from "./img/preview/test.png"
-// const PROJECT_DATA_FILE = "data.json"
+// const PROJECT_DATA_FILE = "projects.json"
 
-// dummy
 const projects = [
     {
-        id: "KLAYNW",
+        id: "VIDEOGRAPHITI23",
+        title: "VideoGraphiti",
+        duration: "Dec 2022 - July 2023",
+        preview: require("./img/preview/videographiti.png"),
+        description: "A fully customizable WordPress theme with mobile responsive design developed for a video filming and editing startup",
+        techStack: [
+            "PHP",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "CMS (WordPress)"
+        ],
+        url: "https://videographiti.biz",
+        srcCode: "https://github.com/risakawagoe/VideoGraphiti",
+        videoID: "fiKMXE8nmeY",
+        featured: false,
+        visible: true
+    },
+    {
+        id: "PORTFOLIO23",
         title: "Portfolio Website",
-        duration: "May 2023 - Present",
+        duration: "May - June 2023",
         preview: require("./img/preview/portfolio-website.png"),
-        description: "Currently in the process of assebling resources (demo video, source code, and some design related implementation).",
+        description: "Personal website to showcase previous works. Developed with React.",
         techStack: [
             "React JS",
             "JavaScript",
@@ -22,12 +39,12 @@ const projects = [
         ],
         url: "https://risakawagoe.com",
         srcCode: "https://github.com/risakawagoe/portfolio/tree/main/v1.0.0",
-        videoID: "pBy1zgt0XPc",
+        videoID: "zc9emCpGzyc",
         featured: false,
         visible: true
     },
     {
-        id: "YHGOD",
+        id: "SYNAPSE23",
         title: "SFU Synapse - React app",
         duration: "Jan - Apr 2023",
         preview: require("./img/preview/sfu-synapse.png"),
@@ -46,12 +63,12 @@ const projects = [
         ],
         url: null,
         srcCode: "https://github.com/risakawagoe/sfu-synapse",
-        videoID: "pBy1zgt0XPc",
+        videoID: "QQN_wKMDQM4",
         featured: true,
         visible: true
     },
     {
-        id: "PAUSBN",
+        id: "PIGTRCK22",
         title: "Pig Tracker",
         duration: "Sep - Dec 2022",
         preview: require("./img/preview/pig-tracker.png"),
@@ -68,12 +85,12 @@ const projects = [
         ],
         url: "https://pig-tracker.risakawagoe.com",
         srcCode: "https://github.com/risakawagoe/pig-tracker",
-        videoID: "pBy1zgt0XPc",
+        videoID: "zc9emCpGzyc",
         featured: false,
         visible: true
     },
     {
-        id: "CHEIUDG",
+        id: "MAZEGAME22",
         title: "Survive in the End - 2D Java Maze Game",
         duration: "Jan - Apr 2022",
         preview: require("./img/preview/2D-java-maze-game.png"),
@@ -92,7 +109,7 @@ const projects = [
         visible: true
     },
     {
-        id: "DIGAAS",
+        id: "MINATOYA21",
         title: "Business Enterprise WordPress Theme",
         duration: "Jun - Aug 2021",
         preview: require("./img/preview/web-business-website.png"),
@@ -104,14 +121,14 @@ const projects = [
             "CSS",
             "CMS (WordPress)"
         ],
-        url: "https://kawagoeweb.com",
+        url: "https://minatoya.risakawagoe.com",
         srcCode: "https://github.com/risakawagoe/wordpress-theme-business",
-        videoID: "pBy1zgt0XPc",
+        videoID: "zc9emCpGzyc",
         featured: false,
         visible: true
     },
     {
-        id: "DIGAAS",
+        id: "DIGPLN20",
         title: "Digital Daily Planner Printer",
         duration: "Jul - Aug 2020",
         preview: require("./img/preview/daily-planner-printer.png"),
@@ -123,7 +140,7 @@ const projects = [
         ],
         url: "https://daily-planner.risakawagoe.com",
         srcCode: "https://github.com/risakawagoe/daily-planner-printer",
-        videoID: "pBy1zgt0XPc",
+        videoID: "ZCgu2CbuHS8",
         featured: false,
         visible: true
     }

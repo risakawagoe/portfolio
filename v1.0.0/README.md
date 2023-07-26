@@ -1,1 +1,2 @@
-**currently under development
+# Personal website
+portfolio developed with React.

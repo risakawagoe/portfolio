@@ -81,10 +81,10 @@ export default function App() {
                     </ul>
                 </nav>
 
-                <div className='contact-info'>
-                    <p>risa.kawagoe@gmail.com</p>
+                {/* <div className='contact-info'>
+                    <p>risa.kawagoe[at]gmail.com</p>
                     <p>+1 (236) 982-8078</p>
-                </div>
+                </div> */}
             </footer>
             {(view === "about" || view === "contact") && <Modal view={view} notifyModalClosure={closeSectionModal} />}
             {view === "video" && project && <VideoModal project={project} notifyModalClosure={closeVideoModal} />}
