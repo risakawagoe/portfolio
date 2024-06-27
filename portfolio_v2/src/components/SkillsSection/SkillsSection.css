@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap');
+
+.skills-subheading {
+    font-family: "Sonsie One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    margin-bottom: 8px;
+}

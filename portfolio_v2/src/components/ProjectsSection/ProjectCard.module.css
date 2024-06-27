@@ -1,0 +1,43 @@
+.controls {
+    transition: opacity 150ms ease;
+    opacity: 0;
+}
+.root:hover .controls {
+    opacity: 1;
+}
+.control[data-inactive] {
+    opacity: 0;
+    cursor: default;
+}
+
+.title {
+    color: var(--theme-green);
+    font-family: "Montserrat Alternates";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 122.089%; /* 19.534px */
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.duration {
+    color: rgba(0, 0, 0, 0.6);
+    font-family: "Montserrat Alternates";
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+.summary {
+    color: #000;
+    font-family: "Montserrat Alternates";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4rem; /* 17.092px */
+}
+.linkBtn:disabled, .button[data-disabled] {
+    border-color: transparent;
+    background-color: transparent;
+  }

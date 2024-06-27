@@ -1,0 +1,44 @@
+:root {
+    --theme-orange: #E76F00;
+    --theme-green: hsl(179, 57%, 35%);
+    --theme-dark: #3C3C3C;
+}
+body {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.theme-orange {
+    color: var(--theme-orange);
+}
+.theme-green {
+    color: var(--theme-green);
+}
+@media screen and (max-width: 520px) {
+    .wrapper {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+}
+
+
+/* text */
+.responsive-text-lg {
+    font-size: 28px;
+}
+
+@media screen and (max-width: 720px) {
+    .responsive-text-lg {
+        font-size: 24px !important;
+    }
+}
+
+
+/* menu item pill */
+.menuItem {
+    cursor: pointer;
+}
+.menuItem:hover, .menuItem:active {
+    color: #fff;
+    background-color: var(--theme-orange);
+}
