@@ -1,10 +1,8 @@
-import { Box, Button, Center, Container, Flex, Group, Image, Pill, Stack, Text, UnstyledButton } from "@mantine/core";
+import { Box, Container, Flex, Group, Image, Pill, Text, UnstyledButton } from "@mantine/core";
 import { FC } from "react";
-import linkedinLogo from "../../images/logos/logos_linkedin.png";
-import githubLogo from "../../images/logos/logos_github.png";
-import resumeLogo from "../../images/logos/logos_resume.png";
 import timmy from "../../images/timmy.png";
 import "./FooterSection.css";
+import { LinkButtons } from "../templates/LinkButtons";
 
 export const FooterSection: FC = () => {
     return(
@@ -13,9 +11,7 @@ export const FooterSection: FC = () => {
                 <Flex justify="space-between" align="center" id="footerFlex">
                     <Box>
                         <Group justify="flex-start" gap={8} w="100%" id="footerLinks">
-                            <Button variant="default"><Image w={56} src={linkedinLogo} /></Button>
-                            <Button variant="default"><Image w={56} src={githubLogo} /></Button>
-                            <Button variant="default"><Image w={56} src={resumeLogo} /></Button>
+                            <LinkButtons />
                         </Group>
                         <Group gap={8} mt={16} id="footerMenu">
                             <Pill fz={12} fw={500} size="lg" className="menuItem">#Skills</Pill>

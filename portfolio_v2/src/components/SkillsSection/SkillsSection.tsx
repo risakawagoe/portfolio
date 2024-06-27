@@ -1,30 +1,46 @@
-import { Box, Card, Container, Flex, Group, Image, SimpleGrid, Stack, Text, Title } from "@mantine/core";
+import { AspectRatio, Box, Card, Container, Flex, Group, Image, SimpleGrid, Stack, Text, Title } from "@mantine/core";
 import { FC } from "react";
 import "./SkillsSection.css";
-import reactIcon from "../../images/react-icon.png";
+import { 
+    StackIconJavascript, 
+    StackIconTypescript, 
+    StackIconReact, 
+    StackIconAngular,
+    StackIconHtml,
+    StackIconCss,
+    StackIconMysql,
+    StackIconGCP,
+    StackIconGithub,
+    StackIconFigma,
+    StackIconNodejs,
+    StackIconJava,
+    StackIconC,
+    StackIconPHP,
+    StackIconPython,
+    StackIconKotlin} from "../../images/stack-icons/StackIcons";
 
 export const SkillsSection: FC = () => {
     const frontendSkills = [
-        { icon: null, name: "JavaScript" },
-        { icon: null, name: "TypeScript" },
-        { icon: null, name: "React" },
-        { icon: null, name: "Angular" },
-        { icon: null, name: "HTML" },
-        { icon: null, name: "CSS" },
+        { icon: StackIconJavascript, name: "JavaScript" },
+        { icon: StackIconTypescript, name: "TypeScript" },
+        { icon: StackIconReact, name: "React" },
+        { icon: StackIconAngular, name: "Angular" },
+        { icon: StackIconHtml, name: "HTML" },
+        { icon: StackIconCss, name: "CSS" },
     ];
     const backendSkills = [
-        { icon: null, name: "node.js" },
-        { icon: null, name: "Java" },
-        { icon: null, name: "C/C++" },
-        { icon: null, name: "PHP" },
-        { icon: null, name: "Python" },
-        { icon: null, name: "Kotlin" },
+        { icon: StackIconNodejs, name: "node.js" },
+        { icon: StackIconJava, name: "Java" },
+        { icon: StackIconC, name: "C/C++" },
+        { icon: StackIconPHP, name: "PHP" },
+        { icon: StackIconPython, name: "Python" },
+        { icon: StackIconKotlin, name: "Kotlin" },
     ];
     const otherSkills = [
-        { icon: null, name: "MySQL" },
-        { icon: null, name: "Google Cloud Platform" },
-        { icon: null, name: "Git" },
-        { icon: null, name: "Figma" },
+        { icon: StackIconMysql, name: "MySQL" },
+        { icon: StackIconGCP, name: "Google Cloud Platform" },
+        { icon: StackIconGithub, name: "Git" },
+        { icon: StackIconFigma, name: "Figma" },
     ];
     const skillsets = [
         { label: "Frontend", list: frontendSkills },
@@ -47,7 +63,9 @@ export const SkillsSection: FC = () => {
                                     <Stack>
                                         {skillset.list.map(skill => (
                                             <Group justify="flex-start" gap={8}>
-                                                <Image w={28} src={reactIcon} />
+                                                <AspectRatio w={28} ratio={1}>
+                                                    <Image w="100%" h="100%" fit="contain" src={skill.icon} />
+                                                </AspectRatio>
                                                 <Text>{skill.name}</Text>
                                             </Group>
                                         ))}

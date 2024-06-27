@@ -43,7 +43,7 @@ export const ProjectCard: FC<Props> = ({ project, openModal }) => {
     }
 
     return(
-        <Card withBorder>
+        <Card withBorder ff="var(--mantine-font-family)">
             <Card.Section withBorder>
                 <Carousel withIndicators loop classNames={classes}>
                     {slides}
@@ -65,9 +65,9 @@ export const ProjectCard: FC<Props> = ({ project, openModal }) => {
                                     FEATURED
                                 </Badge>}
                         </Group>
-                        <Title className={classes.title}>{project.name}</Title>
-                        <Text className={classes.duration}>{getDuration(project.start, project.end)}</Text>
-                        <Text className={classes.summary}>{project.summary}</Text>
+                        <Title ff="var(--mantine-font-family)" className={classes.title}>{project.name}</Title>
+                        <Text ff="var(--mantine-font-family)" className={classes.duration}>{getDuration(project.start, project.end)}</Text>
+                        <Text ff="var(--mantine-font-family)" className={classes.summary}>{project.summary}</Text>
                         <Group gap={8} mt={12} mb={12}>
                             {project.getConcatenatedTechStack().map(item => <Pill key={item}>{item}</Pill>)}
                         </Group>

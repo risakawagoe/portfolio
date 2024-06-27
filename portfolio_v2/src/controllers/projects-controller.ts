@@ -1,12 +1,12 @@
 import { Project } from "../models/Project";
 
 export async function getAllProjects(): Promise<{ success: boolean, data: Project[] }> {
-    if(process.env.REACT_APP_PROJECT_SERVICE_ENDPOINT === undefined) {
+    if(process.env.REACT_APP_PORTFOLIO_DB_SERVICE_ENDPOINT === undefined) {
         return { success: false, data: [] };
     }
 
     try {
-        const response = await fetch(`${process.env.REACT_APP_PROJECT_SERVICE_ENDPOINT}/api/project`, {
+        const response = await fetch(`${process.env.REACT_APP_PORTFOLIO_DB_SERVICE_ENDPOINT}/api/project`, {
             method: "GET",
             mode: "cors",
         });

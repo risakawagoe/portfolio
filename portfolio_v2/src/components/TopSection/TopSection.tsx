@@ -1,19 +1,16 @@
-import { Box, Button, Center, Container, Flex, Group, Image, Pill, Text, Title } from "@mantine/core";
+import { Box, Center, Container, Flex, Group, Image, Pill, Text, Title } from "@mantine/core";
 import { FC } from "react";
 import "./TopSection.css";
 import helloGif from "../../images/hello.gif";
-import linkedinLogo from "../../images/logos/logos_linkedin.png";
-import githubLogo from "../../images/logos/logos_github.png";
-import resumeLogo from "../../images/logos/logos_resume.png";
+import { LinkButtons } from "../templates/LinkButtons";
+
 
 export const TopSection: FC = () => {
     return(
         <Flex direction="column" justify="space-between" mih="100vh" gap={60} pb={64}>
             <Container w="100%" p={16} maw="100%">
                 <Group justify="flex-end" gap={8} w="100%"  id="quickAccessLinks">
-                    <Button variant="default"><Image w={56} src={linkedinLogo} /></Button>
-                    <Button variant="default"><Image w={56} src={githubLogo} /></Button>
-                    <Button variant="default"><Image w={56} src={resumeLogo} /></Button>
+                    <LinkButtons />
                 </Group>
             </Container>
             <Container p={40} w={900} maw="100%">

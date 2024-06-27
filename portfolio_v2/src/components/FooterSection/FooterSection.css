@@ -1,5 +1,6 @@
 #pageTopBtn {
     transition: .3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     animation: float 3s ease-in-out infinite;
 }
 
@@ -14,15 +15,12 @@
 }
 @keyframes float {
 	0% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
 		transform: translatey(0px);
 	}
 	50% {
-        box-shadow: 0 10px 15px 0px rgba(0,0,0,0.3);
 		transform: translatey(-10px);
 	}
 	100% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
 		transform: translatey(0px);
 	}
 }
