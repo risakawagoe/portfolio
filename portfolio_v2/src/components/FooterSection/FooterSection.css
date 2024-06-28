@@ -2,6 +2,7 @@
     transition: .3s;
     box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     animation: float 3s ease-in-out infinite;
+    background-color: #f9f8f8;
 }
 
 @media screen and (max-width: 620px) {

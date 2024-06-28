@@ -20,10 +20,8 @@ export const LinkButtons: FC = () => {
 
     async function fetchProfile() {
         const result = await getProfile();
-        console.log(result)
         if(result.success) {
             const data = result.data;
-            console.log(data)
             const linkedin = isValidLink("linkedin", data) ? data.linkedin : undefined;
             const github = isValidLink("github", data) ? data.github : undefined;
             const resume = isValidLink("resume", data) ? data.resume : undefined;
@@ -51,8 +49,6 @@ export const LinkButtons: FC = () => {
     }
 
     function isValidLink(field: string, data: any) {
-        const isValid = field in data && typeof data[field] === "string" && data[field].trim().length > 0;
-        console.log(field + ": " + isValid)
         return field in data && typeof data[field] === "string" && data[field].trim().length > 0;
     }
 

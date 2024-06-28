@@ -32,13 +32,19 @@ body {
         font-size: 24px !important;
     }
 }
-
+  
 
 /* menu item pill */
 .menuItem {
     cursor: pointer;
 }
-.menuItem:hover, .menuItem:active {
+@media (hover:hover) {
+    .menuItem:hover {
+        color: #fff;
+        background-color: var(--theme-orange);
+    }
+}
+.menuItem:active {
     color: #fff;
     background-color: var(--theme-orange);
 }

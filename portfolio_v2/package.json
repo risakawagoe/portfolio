@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@mantine/carousel": "^7.10.2",
-    "@mantine/core": "^7.10.2",
-    "@mantine/hooks": "^7.10.2",
+    "@mantine/carousel": "^7.11.0",
+    "@mantine/core": "^7.11.0",
+    "@mantine/hooks": "^7.11.0",
     "@tabler/icons-react": "^3.7.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

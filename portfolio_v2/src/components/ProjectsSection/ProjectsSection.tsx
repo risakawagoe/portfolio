@@ -5,12 +5,17 @@ import { getAllProjects } from "../../controllers/projects-controller";
 import { Project } from "../../models/Project";
 import { ProjectCard } from "./ProjectCard";
 import "./ProjectsSection.css";
+import { useScrollIntoView } from "@mantine/hooks";
 
 interface Props {
+    addToMenu: (section: string, scroller: () => void) => void
     openModal: (element: JSX.Element, title: string) => void
 }
 
-export const ProjectsSection: FC<Props> = ({ openModal }) => {
+export const ProjectsSection: FC<Props> = ({ addToMenu, openModal }) => {
+    const { scrollIntoView, targetRef } = useScrollIntoView<HTMLDivElement>({
+        offset: 60,
+    });
     const defautFilter = 'FEATURED PROJECTS';
     const [projects, setProjects] = useState<Project[]>([]);
     const [visibleProjects, setVisisbleProjects] = useState<Project[]>([]);
@@ -19,6 +24,7 @@ export const ProjectsSection: FC<Props> = ({ openModal }) => {
     const searchOptions = [ 'all', 'any' ];
     const [searchOption, setSearchOption] = useState<string>(searchOptions[0]);
     useEffect(() => {
+        addToMenu("Projects", scrollIntoView);
         fetchProjects();
     }, []);
 
@@ -84,7 +90,7 @@ export const ProjectsSection: FC<Props> = ({ openModal }) => {
     return(
         <Box pt={120} pb={120}>
             <Container p={40}  w={1200} maw="100%" className="wrapper">
-            <Title size="h1" fw={400}>#Projects</Title>
+            <Title size="h1" fw={400} ref={targetRef}>#Projects</Title>
             <Group align="flex-end" w="100%" mt={40} style={{ fontFamily: "var(--mantine-font-family)" }}>
                 <MultiSelect
                     label="Filter"

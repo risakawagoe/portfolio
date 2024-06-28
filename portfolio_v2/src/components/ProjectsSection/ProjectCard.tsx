@@ -74,8 +74,9 @@ export const ProjectCard: FC<Props> = ({ project, openModal }) => {
                     </Box>
                     <Group justify="space-between">
                         <Group>
-                            {linkItems.map(item => (
+                            {linkItems.map((item, index) => (
                                 <ActionIcon 
+                                    key={index}
                                     variant="transparent" 
                                     size="md" 
                                     radius="xl" 

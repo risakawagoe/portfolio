@@ -4,27 +4,44 @@
     #heroSection {
         flex-direction: column-reverse;
     }
-    #quickAccessLinks {
-        justify-content: center;
-    }
+  }
+  @media screen and (max-width: 420px) {
+  #quickAccessLinks {
+      justify-content: center;
+  }
 }
 
+#scrollBtn {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-delay: 1s;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+}
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #scrollBtn a {
-    position: relative;
+  position: relative;
   padding-top: 52px;
   display: block;
-  /* display: inline-block; */
-  /* -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%); */
   color: var(--theme-orange);
   font : normal 400 16px 'Josefin Sans', sans-serif;
   letter-spacing: .1em;
   text-decoration: none;
   transition: opacity .3s;
 }
-#scrollBtn a:hover {
-  opacity: .5;
+
+@media (hover:hover) {
+  #scrollBtn a:hover {
+    opacity: .5;
+  }
 }
 /* scroll button: circle */
 #scrollBtn a span { 
@@ -33,7 +50,7 @@
   left: 50%;
   width: 24px;
   height: 40px;
-  margin-left: -15px;
+  margin-left: -12px;
   border: 1.5px solid var(--theme-orange);
   border-radius: 50px;
   box-sizing: border-box;
@@ -87,3 +104,4 @@
     opacity: 0;
   }
 }
+
