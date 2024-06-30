@@ -1,6 +1,8 @@
 # Portfolio Version 2
 Developed with React in 2024
 
+![screenshot](./screenshot.png)
+
 ## Updates
 Added a backend and a separate manager (also in React) to allow for easy content updates.
 
