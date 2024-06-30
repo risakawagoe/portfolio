@@ -44,24 +44,3 @@ export async function getProfile(): Promise<{ success: boolean, data: any }> {
     }
     return { success: false, data: null };
 }
-
-export async function getResumeImg(): Promise<{ success: boolean, data?: string[] }> {
-    if(process.env.REACT_APP_PORTFOLIO_DB_SERVICE_ENDPOINT === undefined) {
-        return { success: false };
-    }
-
-    try {
-        const response = await fetch(`${process.env.REACT_APP_PORTFOLIO_DB_SERVICE_ENDPOINT}/api/profile/resume`, {
-            method: "GET",
-            mode: "cors"
-        });
-
-        if(response.ok) {
-            const result = await response.json();
-            return { success: result.success, data: result.data }; 
-        }
-    }catch(error) {
-        console.log(error);
-    }
-    return { success: false };
-}

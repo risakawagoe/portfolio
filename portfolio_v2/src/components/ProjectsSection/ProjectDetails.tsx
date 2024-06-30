@@ -1,6 +1,6 @@
 import { FC } from "react"
 import { Project } from "../../models/Project";
-import { ActionIcon, Anchor, AspectRatio, Badge, Box, Card, Container, Flex, Group, Pill, Stack, TagsInput, Text, TextInput, Title, Tooltip, TypographyStylesProvider } from "@mantine/core";
+import { Anchor, AspectRatio, Badge, Card, Container, Flex, Group, Pill, Stack, Title, Text, TypographyStylesProvider } from "@mantine/core";
 import { FilesList } from "./FilesList";
 import { IconBrandGithubFilled, IconBrandYoutubeFilled, IconEyeFilled } from "@tabler/icons-react";
 

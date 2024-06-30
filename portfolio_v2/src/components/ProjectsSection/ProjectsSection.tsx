@@ -21,7 +21,7 @@ export const ProjectsSection: FC<Props> = ({ addToMenu, openModal }) => {
     const [visibleProjects, setVisisbleProjects] = useState<Project[]>([]);
     const [filters, setFilters] = useState<string[]>([defautFilter]);
     const [selectedFilters, setSelectedFilters] = useState<string[]>([defautFilter]);
-    const searchOptions = [ 'all', 'any' ];
+    const searchOptions = [ 'any', 'all' ];
     const [searchOption, setSearchOption] = useState<string>(searchOptions[0]);
     useEffect(() => {
         addToMenu("Projects", scrollIntoView);

@@ -1,10 +1,11 @@
-import { ActionIcon, AspectRatio, Badge, Box, Button, Card, Flex, Group, Image, Pill, Stack, Text, Title } from "@mantine/core";
 import { FC } from "react";
-import { Project } from "../../models/Project";
-import { IconBrandGithubFilled, IconBrandYoutubeFilled, IconEyeFilled } from "@tabler/icons-react";
+import { ActionIcon, AspectRatio, Badge, Box, Button, Card, Flex, Group, Image, Pill, Text, Title } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
+import { IconBrandGithubFilled, IconBrandYoutubeFilled, IconEyeFilled } from "@tabler/icons-react";
 import '@mantine/carousel/styles.css';
 import classes from './ProjectCard.module.css';
+
+import { Project } from "../../models/Project";
 import { ProjectDetials } from "./ProjectDetails";
 
 interface Props {

@@ -16,7 +16,7 @@
     font-size: 22px;
     font-style: normal;
     font-weight: 500;
-    line-height: 122.089%; /* 19.534px */
+    line-height: 122.089%;
     margin-top: 12px;
     margin-bottom: 12px;
 }
@@ -35,7 +35,7 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.4rem; /* 17.092px */
+    line-height: 1.4rem;
 }
 .linkBtn:disabled, .button[data-disabled] {
     border-color: transparent;
